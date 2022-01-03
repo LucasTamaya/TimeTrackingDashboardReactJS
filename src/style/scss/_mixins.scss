@@ -1,0 +1,28 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexEvenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+// Grid items
+@mixin gridItems($bg-clr) {
+    width: 300px;
+    height: 150px;
+    background-color: $bg-clr;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: -100;
+}
