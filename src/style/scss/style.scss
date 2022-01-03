@@ -121,32 +121,32 @@ img{
     }
 }
 
-.Work{
+.work{
     @include gridItems($primary-clr-two);
     grid-area: work;
 }
 
-.Play{
+.play{
     @include gridItems($primary-clr-three);
     grid-area: play;
 }
 
-.Study{
+.study{
     @include gridItems($primary-clr-four);
     grid-area: study;
 }
 
-.Exercise{
+.exercise{
     @include gridItems($primary-clr-five);
     grid-area: exercise;
 }
 
-.Social{
+.social{
     @include gridItems($primary-clr-six);
     grid-area: social;
 }
 
-.Self.Care{
+.self-care{
     @include gridItems($primary-clr-seven);
     grid-area: self-care;
 }

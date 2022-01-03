@@ -13,8 +13,8 @@ const DailyVue = () => {
 
                 {dataJson.map(x => (
 
-                    <div className={`${x.title}`} key={uuidv4()}>
-                        <img src={`./images/icon-${x.title}.svg`} alt="icon" />
+                    <div className={`${x.id}`} key={uuidv4()}>
+                        <img src={`./images/icon-${x.id}.svg`} alt="icon" />
                         <div className="item-container">
                             <div className="current-time">
                                 <h2>{x.title}</h2>

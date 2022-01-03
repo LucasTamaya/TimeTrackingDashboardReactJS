@@ -98,7 +98,7 @@ img {
   text-align: center;
 }
 
-.Work {
+.work {
   width: 300px;
   height: 150px;
   background-color: #ff8c66;
@@ -109,7 +109,7 @@ img {
   grid-area: work;
 }
 
-.Play {
+.play {
   width: 300px;
   height: 150px;
   background-color: #56c2e6;
@@ -120,7 +120,7 @@ img {
   grid-area: play;
 }
 
-.Study {
+.study {
   width: 300px;
   height: 150px;
   background-color: #ff5c7c;
@@ -131,7 +131,7 @@ img {
   grid-area: study;
 }
 
-.Exercise {
+.exercise {
   width: 300px;
   height: 150px;
   background-color: #4acf81;
@@ -142,7 +142,7 @@ img {
   grid-area: exercise;
 }
 
-.Social {
+.social {
   width: 300px;
   height: 150px;
   background-color: #7536d3;
@@ -153,7 +153,7 @@ img {
   grid-area: social;
 }
 
-.Self.Care {
+.self-care {
   width: 300px;
   height: 150px;
   background-color: #f1c65b;
