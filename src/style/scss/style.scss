@@ -112,13 +112,86 @@ img{
     height: 35%;
     @include flexBetween;  
     padding: 0 30px;
-    // background-color: red;
     border-radius: 15px;
 
     a{
         color: $neutral-clr-three;
         font-size: 1.5rem;
         text-align: center;
+    }
+}
+
+.Work{
+    @include gridItems($primary-clr-two);
+    grid-area: work;
+}
+
+.Play{
+    @include gridItems($primary-clr-three);
+    grid-area: play;
+}
+
+.Study{
+    @include gridItems($primary-clr-four);
+    grid-area: study;
+}
+
+.Exercise{
+    @include gridItems($primary-clr-five);
+    grid-area: exercise;
+}
+
+.Social{
+    @include gridItems($primary-clr-six);
+    grid-area: social;
+}
+
+.Self.Care{
+    @include gridItems($primary-clr-seven);
+    grid-area: self-care;
+}
+
+.item-container{
+    @include flexBetween;
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    background-color: $neutral-clr-two;
+    border-radius: 15px;
+    z-index: 1000;
+    padding: 20px;
+    bottom: 0;
+}
+
+.current-time{
+    h2{
+        color: $neutral-clr-four;
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+
+    p{
+        color: $neutral-clr-four;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+}
+
+.previous-time{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 20px;
+    img{
+        position: relative;
+        right: 0;
+    }
+
+    p{
+        color: $neutral-clr-three;
+        font-size: 1.4rem;
     }
 }
 // End Main
