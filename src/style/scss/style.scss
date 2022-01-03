@@ -2,3 +2,124 @@
 @import "./variables";
 @import "./mixins";
 // End Import scss module
+
+// Reset css
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+// End Reset css
+
+// General style
+:root{
+    font-size: 10px;
+}
+
+body{
+    max-width: 100vw;
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neutral-clr-one;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+p{
+    font-family: $primary-font;
+}
+
+a{
+    font-family: $primary-font;
+}
+
+img{
+    position: absolute;
+    right: 0;
+    top: -5px;
+    z-index: -1;
+}
+
+// End General style
+
+// Main
+.grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+    "main-grid"
+    "work"
+    "play"
+    "study"
+    "exercise"
+    "social"
+    "self-care"
+    ;
+    row-gap: 30px;
+}
+
+.main-grid-container{
+    width: 300px;
+    height: 200px;
+    background-color: $neutral-clr-two;
+    border-radius: 15px;
+    grid-area: main-grid;
+}
+
+.reporter-container{
+    width: 100%;
+    height: 65%;
+    background-color: $primary-clr-one;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    .avatar{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid $neutral-clr-four;
+        background-image: url("../../../public/images/image-jeremy.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .reporter-txt{
+        p{
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $neutral-clr-three;
+            &:last-child{
+                font-size: 2.1rem;
+                font-weight: 300;
+                color: $neutral-clr-four;
+            }
+        }
+    }
+}
+
+.timeframe{
+    width: 100%;
+    height: 35%;
+    @include flexBetween;  
+    padding: 0 30px;
+    // background-color: red;
+    border-radius: 15px;
+
+    a{
+        color: $neutral-clr-three;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+// End Main
+
