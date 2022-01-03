@@ -1,10 +1,10 @@
-import DailyVue from "./vue/DailyVue";
+import Dashboard from "./vue/Dashboard";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <DailyVue />
+          <Dashboard />
       </header>
     </div>
   );

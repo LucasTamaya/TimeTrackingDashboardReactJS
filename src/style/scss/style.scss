@@ -62,7 +62,10 @@ img{
     "social"
     "self-care"
     ;
-    row-gap: 30px;
+    // row-gap: 15px;
+    &:first-child{
+        row-gap: 30px;
+    }
 }
 
 .main-grid-container{
@@ -114,11 +117,25 @@ img{
     padding: 0 30px;
     border-radius: 15px;
 
-    a{
+    p{
         color: $neutral-clr-three;
         font-size: 1.5rem;
         text-align: center;
+        transition: 0.2s ease;
+        cursor: pointer;
     }
+}
+
+#daily{
+    color: $neutral-clr-four
+}
+
+#weekly{
+    color: $neutral-clr-three
+}
+
+#monthly{
+    color: $neutral-clr-three
 }
 
 .work{
@@ -195,4 +212,8 @@ img{
     }
 }
 // End Main
+
+@media screen and (min-width: 1440px) {
+    
+}
 

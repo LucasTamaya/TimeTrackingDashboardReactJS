@@ -1,18 +1,42 @@
-const MainGridContainer = () => {
+const MainGridContainer = ({ setTimeFrame }) => {
+
+    // Met à jour le timeframe lorsqu'on clique dessus
+    const handleClick = (e) => {
+        setTimeFrame(e.target.id);
+        if(e.target.id === "daily"){
+            document.getElementById("daily").style.color = "hsl(236, 100%, 87%)";
+            document.getElementById("weekly").style.color = "hsl(235, 45%, 61%)";
+            document.getElementById("monthly").style.color = "hsl(235, 45%, 61%)";
+            console.log("test")
+        }
+        else if(e.target.id === "weekly"){
+            document.getElementById("daily").style.color = "hsl(235, 45%, 61%)";
+            document.getElementById("weekly").style.color = "hsl(236, 100%, 87%)";
+            document.getElementById("monthly").style.color = "hsl(235, 45%, 61%)";
+            console.log("test 2")
+        }
+        else{
+            document.getElementById("daily").style.color = "hsl(235, 45%, 61%)";
+            document.getElementById("weekly").style.color = "hsl(235, 45%, 61%)";
+            document.getElementById("monthly").style.color = "hsl(236, 100%, 87%)";
+            console.log("test 3")
+        };
+    };
+
     return (
         <div>
             <div className="main-grid-container">
                 <div className="reporter-container">
-                    <div className="avatar"></div> 
+                    <div className="avatar"></div>
                     <div className="reporter-txt">
                         <p>Report for</p>
                         <p>Jeremy Robson</p>
                     </div>
                 </div>
                 <div className="timeframe">
-                    <a id="daily" href="#">Daily</a>
-                    <a id="weekly" href="#">Weekly</a>
-                    <a id="monthly" href="#">Monthly</a>
+                    <p id="daily" href="#" onClick={handleClick}>Daily</p>
+                    <p id="weekly" href="#" onClick={handleClick}>Weekly</p>
+                    <p id="monthly" href="#" onClick={handleClick}>Monthly</p>
                 </div>
             </div>
         </div>

@@ -42,6 +42,8 @@ img {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(7, 1fr);
   grid-template-areas: "main-grid" "work" "play" "study" "exercise" "social" "self-care";
+}
+.grid:first-child {
   row-gap: 30px;
 }
 
@@ -92,10 +94,24 @@ img {
   padding: 0 30px;
   border-radius: 15px;
 }
-.timeframe a {
+.timeframe p {
   color: #6f76c8;
   font-size: 1.5rem;
   text-align: center;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+#daily {
+  color: #bdc1ff;
+}
+
+#weekly {
+  color: #6f76c8;
+}
+
+#monthly {
+  color: #6f76c8;
 }
 
 .work {
