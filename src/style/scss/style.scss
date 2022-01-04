@@ -50,19 +50,9 @@ img{
 .grid{
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
-    grid-template-areas: 
-    "main-grid"
-    "work"
-    "play"
-    "study"
-    "exercise"
-    "social"
-    "self-care"
-    ;
-    row-gap: 0;
+    @include flexCenter;
+    flex-direction: column;
+    row-gap: 30px;
 }
 
 .main-grid-container{
