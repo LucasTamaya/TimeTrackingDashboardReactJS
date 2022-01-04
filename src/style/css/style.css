@@ -32,7 +32,6 @@ img {
   position: absolute;
   right: 0;
   top: -5px;
-  z-index: -1;
 }
 
 .grid {
@@ -42,9 +41,7 @@ img {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(7, 1fr);
   grid-template-areas: "main-grid" "work" "play" "study" "exercise" "social" "self-care";
-}
-.grid:first-child {
-  row-gap: 30px;
+  row-gap: 0;
 }
 
 .main-grid-container {
@@ -105,13 +102,22 @@ img {
 #daily {
   color: #bdc1ff;
 }
+#daily:hover {
+  color: #bdc1ff;
+}
 
 #weekly {
   color: #6f76c8;
 }
+#weekly:hover {
+  color: #bdc1ff;
+}
 
 #monthly {
   color: #6f76c8;
+}
+#monthly:hover {
+  color: #bdc1ff;
 }
 
 .work {
@@ -121,7 +127,6 @@ img {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  z-index: -100;
   grid-area: work;
 }
 
@@ -132,7 +137,6 @@ img {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  z-index: -100;
   grid-area: play;
 }
 
@@ -143,7 +147,6 @@ img {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  z-index: -100;
   grid-area: study;
 }
 
@@ -154,7 +157,6 @@ img {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  z-index: -100;
   grid-area: exercise;
 }
 
@@ -165,7 +167,6 @@ img {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  z-index: -100;
   grid-area: social;
 }
 
@@ -176,7 +177,6 @@ img {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  z-index: -100;
   grid-area: self-care;
 }
 
@@ -189,9 +189,13 @@ img {
   height: 75%;
   background-color: #1c1f4a;
   border-radius: 15px;
-  z-index: 1000;
   padding: 20px;
   bottom: 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.item-container:hover {
+  background-color: #30357c;
 }
 
 .current-time h2 {
@@ -214,8 +218,16 @@ img {
   row-gap: 20px;
 }
 .previous-time img {
-  position: relative;
-  right: 0;
+  position: unset;
+  right: unset;
+  top: unset;
+  z-index: 1000;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(6deg) brightness(100%) contrast(106%);
+  transition: 0.2s ease;
+  padding: 5px;
+}
+.previous-time img:hover {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(6deg) brightness(170%) contrast(106%);
 }
 .previous-time p {
   color: #6f76c8;

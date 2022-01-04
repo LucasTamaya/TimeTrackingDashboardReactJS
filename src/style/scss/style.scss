@@ -41,7 +41,7 @@ img{
     position: absolute;
     right: 0;
     top: -5px;
-    z-index: -1;
+    // z-index: -1;
 }
 
 // End General style
@@ -62,10 +62,7 @@ img{
     "social"
     "self-care"
     ;
-    // row-gap: 15px;
-    &:first-child{
-        row-gap: 30px;
-    }
+    row-gap: 0;
 }
 
 .main-grid-container{
@@ -127,15 +124,24 @@ img{
 }
 
 #daily{
-    color: $neutral-clr-four
+    color: $neutral-clr-four;
+    &:hover{
+        color: $neutral-clr-four;
+    }
 }
 
 #weekly{
-    color: $neutral-clr-three
+    color: $neutral-clr-three;
+    &:hover{
+        color: $neutral-clr-four;
+    }
 }
 
 #monthly{
-    color: $neutral-clr-three
+    color: $neutral-clr-three;
+    &:hover{
+        color: $neutral-clr-four;
+    }
 }
 
 .work{
@@ -175,10 +181,20 @@ img{
     height: 75%;
     background-color: $neutral-clr-two;
     border-radius: 15px;
-    z-index: 1000;
+    // z-index: 1000;
     padding: 20px;
     bottom: 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover{
+        background-color: $hover-clr;
+    }
 }
+
+// .item-container:hover{
+//     background-color: red;
+// }
 
 .current-time{
     h2{
@@ -201,9 +217,19 @@ img{
     flex-direction: column;
     align-items: flex-end;
     row-gap: 20px;
+
     img{
-        position: relative;
-        right: 0;
+        position: unset;
+        right: unset;
+        top: unset;
+        z-index: 1000;
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(6deg) brightness(100%) contrast(106%);   
+        transition: 0.2s ease; 
+        padding: 5px;
+
+        &:hover{
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(6deg) brightness(170%) contrast(106%);    
+        }
     }
 
     p{
@@ -213,7 +239,7 @@ img{
 }
 // End Main
 
-@media screen and (min-width: 1440px) {
+// @media screen and (min-width: 1440px) {
     
-}
+// }
 

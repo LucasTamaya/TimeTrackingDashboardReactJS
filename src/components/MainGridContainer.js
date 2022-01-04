@@ -7,19 +7,16 @@ const MainGridContainer = ({ setTimeFrame }) => {
             document.getElementById("daily").style.color = "hsl(236, 100%, 87%)";
             document.getElementById("weekly").style.color = "hsl(235, 45%, 61%)";
             document.getElementById("monthly").style.color = "hsl(235, 45%, 61%)";
-            console.log("test")
         }
         else if(e.target.id === "weekly"){
             document.getElementById("daily").style.color = "hsl(235, 45%, 61%)";
             document.getElementById("weekly").style.color = "hsl(236, 100%, 87%)";
             document.getElementById("monthly").style.color = "hsl(235, 45%, 61%)";
-            console.log("test 2")
         }
         else{
             document.getElementById("daily").style.color = "hsl(235, 45%, 61%)";
             document.getElementById("weekly").style.color = "hsl(235, 45%, 61%)";
             document.getElementById("monthly").style.color = "hsl(236, 100%, 87%)";
-            console.log("test 3")
         };
     };
 
