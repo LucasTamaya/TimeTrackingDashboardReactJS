@@ -177,13 +177,14 @@ img{
 }
 
 .item-container{
-    @include flexBetween;
     position: absolute;
     width: 100%;
     height: 75%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color: $neutral-clr-two;
     border-radius: 15px;
-    // z-index: 1000;
     padding: 20px;
     bottom: 0;
     cursor: pointer;
@@ -194,11 +195,8 @@ img{
     }
 }
 
-// .item-container:hover{
-//     background-color: red;
-// }
-
-.current-time{
+.item-top{
+    @include flexBetween;
     h2{
         color: $neutral-clr-four;
         font-family: $primary-font;
@@ -206,19 +204,6 @@ img{
         font-size: 1.8rem;
         margin-bottom: 5px;
     }
-
-    p{
-        color: $neutral-clr-four;
-        font-size: 3rem;
-        font-weight: 300;
-    }
-}
-
-.previous-time{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    row-gap: 20px;
 
     img{
         position: unset;
@@ -233,12 +218,24 @@ img{
             filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(6deg) brightness(170%) contrast(106%);    
         }
     }
+}
+
+.item-bottom{
+    @include flexBetween;
+    row-gap: 20px;
 
     p{
-        color: $neutral-clr-three;
-        font-size: 1.4rem;
+        color: $neutral-clr-four;
+        font-size: 3rem;
+        font-weight: 300;
+
+        &:last-child{
+            color: $neutral-clr-three;
+            font-size: 1.4rem;
+            }
+        }
     }
-}
+
 // End Main
 
 @media screen and (min-width: 1440px) {
@@ -335,5 +332,21 @@ img{
         @include gridItems($primary-clr-seven);
         height: 260px;
         grid-area: self-care;
+    }
+
+    .item-container{
+        height: 80%;
+        row-gap: 30px;
+    }
+
+    .item-bottom{
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 10px;
+        p{
+            &:first-child{
+                font-size: 5rem;
+            }
+        }
     }
 }
