@@ -23,7 +23,7 @@ const Dashboard = () => {
                                 </div>
                                 <div className="item-bottom">
                                     {timeFrame === "daily" ? <p>{x.timeframes.daily.current}hrs</p> : timeFrame === "weekly" ? <p>{x.timeframes.weekly.current}hrs</p> : <p>{x.timeframes.monthly.current}hrs</p>}
-                                    {timeFrame === "daily" ? <p>Last day -{x.timeframes.daily.previous}hrs</p> : timeFrame === "weekly" ? <p>Last week -{x.timeframes.weekly.previous}hrs</p> : <p>Last month -{x.timeframes.monthly.previous}hrs</p>}
+                                    {timeFrame === "daily" ? <p>Last day - {x.timeframes.daily.previous}hrs</p> : timeFrame === "weekly" ? <p>Last week - {x.timeframes.weekly.previous}hrs</p> : <p>Last month - {x.timeframes.monthly.previous}hrs</p>}
                                 </div>
                             </div>
                         </div>

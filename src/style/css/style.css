@@ -99,10 +99,11 @@ img {
   cursor: pointer;
 }
 
-#daily {
+#daily:hover {
   color: #bdc1ff;
 }
-#daily:hover {
+
+#daily.active {
   color: #bdc1ff;
 }
 
@@ -113,10 +114,18 @@ img {
   color: #bdc1ff;
 }
 
+#weekly.active {
+  color: #bdc1ff;
+}
+
 #monthly {
   color: #6f76c8;
 }
 #monthly:hover {
+  color: #bdc1ff;
+}
+
+#monthly.active {
   color: #bdc1ff;
 }
 

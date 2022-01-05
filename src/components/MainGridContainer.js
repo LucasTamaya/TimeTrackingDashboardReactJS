@@ -1,22 +1,22 @@
 const MainGridContainer = ({ setTimeFrame }) => {
 
-    // Met à jour le timeframe lorsqu'on clique dessus
+    // Met à jour le timeframe lorsqu'on clique dessus et change la couleur de la font
     const handleClick = (e) => {
         setTimeFrame(e.target.id);
         if(e.target.id === "daily"){
-            document.getElementById("daily").style.color = "hsl(236, 100%, 87%)";
-            document.getElementById("weekly").style.color = "hsl(235, 45%, 61%)";
-            document.getElementById("monthly").style.color = "hsl(235, 45%, 61%)";
+            document.getElementById("daily").classList.add("active");
+            document.getElementById("weekly").classList.remove("active");
+            document.getElementById("monthly").classList.remove("active");
         }
         else if(e.target.id === "weekly"){
-            document.getElementById("daily").style.color = "hsl(235, 45%, 61%)";
-            document.getElementById("weekly").style.color = "hsl(236, 100%, 87%)";
-            document.getElementById("monthly").style.color = "hsl(235, 45%, 61%)";
+            document.getElementById("daily").classList.remove("active");
+            document.getElementById("weekly").classList.add("active");
+            document.getElementById("monthly").classList.remove("active");
         }
         else{
-            document.getElementById("daily").style.color = "hsl(235, 45%, 61%)";
-            document.getElementById("weekly").style.color = "hsl(235, 45%, 61%)";
-            document.getElementById("monthly").style.color = "hsl(236, 100%, 87%)";
+            document.getElementById("daily").classList.remove("active");
+            document.getElementById("weekly").classList.remove("active");
+            document.getElementById("monthly").classList.add("active");
         };
     };
 
@@ -31,9 +31,9 @@ const MainGridContainer = ({ setTimeFrame }) => {
                     </div>
                 </div>
                 <div className="timeframe">
-                    <p id="daily" href="#" onClick={handleClick}>Daily</p>
-                    <p id="weekly" href="#" onClick={handleClick}>Weekly</p>
-                    <p id="monthly" href="#" onClick={handleClick}>Monthly</p>
+                    <p id="daily" className="active"onClick={handleClick}>Daily</p>
+                    <p id="weekly" onClick={handleClick}>Weekly</p>
+                    <p id="monthly" onClick={handleClick}>Monthly</p>
                 </div>
             </div>
         </div>

@@ -111,10 +111,13 @@ img{
 }
 
 #daily{
-    color: $neutral-clr-four;
     &:hover{
         color: $neutral-clr-four;
     }
+}
+
+#daily.active{
+    color: $neutral-clr-four;
 }
 
 #weekly{
@@ -124,11 +127,19 @@ img{
     }
 }
 
+#weekly.active{
+    color: $neutral-clr-four;
+}
+
 #monthly{
     color: $neutral-clr-three;
     &:hover{
         color: $neutral-clr-four;
     }
+}
+
+#monthly.active{
+    color: $neutral-clr-four;
 }
 
 .grid{
