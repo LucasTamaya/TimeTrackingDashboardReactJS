@@ -66,7 +66,7 @@ img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 3px solid #bdc1ff;
+  border: 3px solid white;
   background-image: url("../../../public/images/image-jeremy.png");
   background-size: cover;
   background-position: center;
@@ -74,12 +74,12 @@ img {
 .reporter-container .reporter-txt p {
   font-size: 1.4rem;
   font-weight: 400;
-  color: #6f76c8;
+  color: #bdc1ff;
 }
 .reporter-container .reporter-txt p:last-child {
   font-size: 2.1rem;
   font-weight: 300;
-  color: #bdc1ff;
+  color: white;
 }
 
 .timeframe {
@@ -100,33 +100,33 @@ img {
 }
 
 #daily:hover {
-  color: #bdc1ff;
+  color: white;
 }
 
 #daily.active {
-  color: #bdc1ff;
+  color: white;
 }
 
 #weekly {
   color: #6f76c8;
 }
 #weekly:hover {
-  color: #bdc1ff;
+  color: white;
 }
 
 #weekly.active {
-  color: #bdc1ff;
+  color: white;
 }
 
 #monthly {
   color: #6f76c8;
 }
 #monthly:hover {
-  color: #bdc1ff;
+  color: white;
 }
 
 #monthly.active {
-  color: #bdc1ff;
+  color: white;
 }
 
 .grid {
@@ -225,7 +225,7 @@ img {
   align-items: center;
 }
 .item-top h2 {
-  color: #bdc1ff;
+  color: white;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 1.8rem;
@@ -251,12 +251,12 @@ img {
   row-gap: 20px;
 }
 .item-bottom p {
-  color: #bdc1ff;
+  color: white;
   font-size: 3rem;
   font-weight: 300;
 }
 .item-bottom p:last-child {
-  color: #6f76c8;
+  color: #bdc1ff;
   font-size: 1.4rem;
 }
 

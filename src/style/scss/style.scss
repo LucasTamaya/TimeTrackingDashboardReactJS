@@ -74,7 +74,7 @@ img{
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        border: 3px solid $neutral-clr-four;
+        border: 3px solid $neutral-clr-five;
         background-image: url("../../../public/images/image-jeremy.png");
         background-size: cover;
         background-position: center;
@@ -84,11 +84,11 @@ img{
         p{
             font-size: 1.4rem;
             font-weight: 400;
-            color: $neutral-clr-three;
+            color: $neutral-clr-four;
             &:last-child{
                 font-size: 2.1rem;
                 font-weight: 300;
-                color: $neutral-clr-four;
+                color: $neutral-clr-five;
             }
         }
     }
@@ -112,34 +112,34 @@ img{
 
 #daily{
     &:hover{
-        color: $neutral-clr-four;
+        color: $neutral-clr-five;
     }
 }
 
 #daily.active{
-    color: $neutral-clr-four;
+    color: $neutral-clr-five;
 }
 
 #weekly{
     color: $neutral-clr-three;
     &:hover{
-        color: $neutral-clr-four;
+        color: $neutral-clr-five;
     }
 }
 
 #weekly.active{
-    color: $neutral-clr-four;
+    color: $neutral-clr-five;
 }
 
 #monthly{
     color: $neutral-clr-three;
     &:hover{
-        color: $neutral-clr-four;
+        color: $neutral-clr-five;
     }
 }
 
 #monthly.active{
-    color: $neutral-clr-four;
+    color: $neutral-clr-five;
 }
 
 .grid{
@@ -215,7 +215,7 @@ img{
 .item-top{
     @include flexBetween;
     h2{
-        color: $neutral-clr-four;
+        color: $neutral-clr-five;
         font-family: $primary-font;
         font-weight: 500;
         font-size: 1.8rem;
@@ -242,12 +242,12 @@ img{
     row-gap: 20px;
 
     p{
-        color: $neutral-clr-four;
+        color: $neutral-clr-five;
         font-size: 3rem;
         font-weight: 300;
 
         &:last-child{
-            color: $neutral-clr-three;
+            color: $neutral-clr-four;
             font-size: 1.4rem;
             }
         }

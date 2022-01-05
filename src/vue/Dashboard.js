@@ -29,7 +29,7 @@ const Dashboard = () => {
 
     return (
 
-        <main>
+        <div>
             <div className="container">
                 <MainGridContainer setTimeFrame={setTimeFrame} />
                 <div className="grid">
@@ -50,7 +50,7 @@ const Dashboard = () => {
                     ))}
                 </div>
             </div>
-        </main>
+        </div>
     )
 }
 
