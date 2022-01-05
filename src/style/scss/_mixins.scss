@@ -17,7 +17,7 @@
 }
 
 // Grid items
-@mixin gridItems($bg-clr) {
+@mixin gridItemsSmall($bg-clr) {
     width: 300px;
     height: 150px;
     background-color: $bg-clr;
@@ -26,13 +26,11 @@
     overflow: hidden;
 }
 
-// @media screen and (min-width: 1440px) {
-//     @mixin gridItems($bg-clr) {
-//         width: 300px;
-//         height: 300px;
-//         background-color: $bg-clr;
-//         border-radius: 15px;
-//         position: relative;
-//         overflow: hidden;
-//     }
-// }
+@mixin gridItemsLarge($bg-clr){
+    width: 260px;
+    height: 260px;
+    background-color: $bg-clr;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}

@@ -158,32 +158,32 @@ img{
 }
 
 .work{
-    @include gridItems($primary-clr-two);
+    @include gridItemsSmall($primary-clr-two);
     grid-area: work;
 }
 
 .play{
-    @include gridItems($primary-clr-three);
+    @include gridItemsSmall($primary-clr-three);
     grid-area: play;
 }
 
 .study{
-    @include gridItems($primary-clr-four);
+    @include gridItemsSmall($primary-clr-four);
     grid-area: study;
 }
 
 .exercise{
-    @include gridItems($primary-clr-five);
+    @include gridItemsSmall($primary-clr-five);
     grid-area: exercise;
 }
 
 .social{
-    @include gridItems($primary-clr-six);
+    @include gridItemsSmall($primary-clr-six);
     grid-area: social;
 }
 
 .self-care{
-    @include gridItems($primary-clr-seven);
+    @include gridItemsSmall($primary-clr-seven);
     grid-area: self-care;
 }
 
@@ -269,6 +269,7 @@ img{
     }
 
     .main-grid-container{
+        width: 280px;
         height: 550px;
     }
 
@@ -316,38 +317,32 @@ img{
     }
 
     .work{
-        @include gridItems($primary-clr-two);
-        height: 260px;
+        @include gridItemsLarge($primary-clr-two);
         grid-area: work;
     }
     
     .play{
-        @include gridItems($primary-clr-three);
-        height: 260px;
+        @include gridItemsLarge($primary-clr-three);
         grid-area: play;
     }
     
     .study{
-        @include gridItems($primary-clr-four);
-        height: 260px;
+        @include gridItemsLarge($primary-clr-four);
         grid-area: study;
     }
     
     .exercise{
-        @include gridItems($primary-clr-five);
-        height: 260px;
+        @include gridItemsLarge($primary-clr-five);
         grid-area: exercise;
     }
     
     .social{
-        @include gridItems($primary-clr-six);
-        height: 260px;
+        @include gridItemsLarge($primary-clr-six);
         grid-area: social;
     }
     
     .self-care{
-        @include gridItems($primary-clr-seven);
-        height: 260px;
+        @include gridItemsLarge($primary-clr-seven);
         grid-area: self-care;
     }
 
@@ -362,7 +357,7 @@ img{
         row-gap: 10px;
         p{
             &:first-child{
-                font-size: 5rem;
+                font-size: 5.5rem;
             }
         }
     }
