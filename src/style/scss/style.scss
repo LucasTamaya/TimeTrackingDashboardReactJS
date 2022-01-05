@@ -206,6 +206,12 @@ img{
     }
 }
 
+.item-container.disabled{
+    &:hover{
+        background-color: $neutral-clr-two;
+    }
+}
+
 .item-top{
     @include flexBetween;
     h2{

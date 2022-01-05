@@ -7,6 +7,26 @@ const Dashboard = () => {
 
     const [timeFrame, setTimeFrame] = useState("daily");
 
+    // Enlève le background:hover de ".item-container" au hover du svg ellipsis 
+    const handleMouseEnter = (e) => {
+        document.querySelector(".work").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".play").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".study").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".exercise").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".social").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".self-care").querySelector(".item-container").classList.toggle("disabled");
+    };
+
+    // Remet le background:hover de ".item-container" lorsqu'on hover plus du svg ellipsis 
+    const handleMouseLeave = (e) => {
+        document.querySelector(".work").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".play").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".study").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".exercise").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".social").querySelector(".item-container").classList.toggle("disabled");
+        document.querySelector(".self-care").querySelector(".item-container").classList.toggle("disabled");
+    };
+
     return (
 
         <main>
@@ -19,7 +39,7 @@ const Dashboard = () => {
                             <div className="item-container">
                                 <div className="item-top">
                                     <h2>{x.title}</h2>
-                                    <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+                                    <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
                                 </div>
                                 <div className="item-bottom">
                                     {timeFrame === "daily" ? <p>{x.timeframes.daily.current}hrs</p> : timeFrame === "weekly" ? <p>{x.timeframes.weekly.current}hrs</p> : <p>{x.timeframes.monthly.current}hrs</p>}

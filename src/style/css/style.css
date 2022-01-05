@@ -215,6 +215,10 @@ img {
   background-color: #30357c;
 }
 
+.item-container.disabled:hover {
+  background-color: #1c1f4a;
+}
+
 .item-top {
   display: flex;
   justify-content: space-between;
