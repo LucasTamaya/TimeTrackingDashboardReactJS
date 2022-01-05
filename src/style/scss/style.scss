@@ -20,10 +20,7 @@
 
 body{
     max-width: 100vw;
-    // height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     background-color: $neutral-clr-one;
     padding: 30px;
     overflow-x: hidden;
@@ -47,7 +44,7 @@ img{
 // End General style
 
 // Main
-.grid{
+.container{
     width: 100%;
     height: 100%;
     @include flexCenter;
@@ -132,6 +129,21 @@ img{
     &:hover{
         color: $neutral-clr-four;
     }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "work"
+    "play"
+    "study"
+    "exercise"
+    "social"
+    "self-care"
+    ;
+    row-gap: 30px
 }
 
 .work{
@@ -229,7 +241,99 @@ img{
 }
 // End Main
 
-// @media screen and (min-width: 1440px) {
-    
-// }
+@media screen and (min-width: 1440px) {
+    body{
+        height: 100vh;
+    }
 
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        height: 600px;
+        flex-direction: row;
+        column-gap: 30px;
+    }
+
+    .main-grid-container{
+        height: 550px;
+    }
+
+    .reporter-container{
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .avatar{
+            width: 90px;
+            height: 90px;
+            margin-bottom: 50px;
+        }
+
+        .reporter-txt{
+            p{
+                font-size: 1.7rem;
+
+                &:last-child{
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+
+    .timeframe{
+        height: 30%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+        p{
+            font-size: 1.7rem;
+        }
+    }
+
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "work play study"
+        "exercise social self-care"
+        ;
+        column-gap: 30px;
+    }
+
+    .work{
+        @include gridItems($primary-clr-two);
+        height: 260px;
+        grid-area: work;
+    }
+    
+    .play{
+        @include gridItems($primary-clr-three);
+        height: 260px;
+        grid-area: play;
+    }
+    
+    .study{
+        @include gridItems($primary-clr-four);
+        height: 260px;
+        grid-area: study;
+    }
+    
+    .exercise{
+        @include gridItems($primary-clr-five);
+        height: 260px;
+        grid-area: exercise;
+    }
+    
+    .social{
+        @include gridItems($primary-clr-six);
+        height: 260px;
+        grid-area: social;
+    }
+    
+    .self-care{
+        @include gridItems($primary-clr-seven);
+        height: 260px;
+        grid-area: self-care;
+    }
+}
